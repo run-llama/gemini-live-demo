@@ -19,4 +19,4 @@ jobs:
 
       - name: Run Mypy
         working-directory: src
-        run: uv run -- mypy gemini_live_demo
+        run: uv venv && source .venv/bin/activate && uv pip install mypy && mypy gemini_live_demo

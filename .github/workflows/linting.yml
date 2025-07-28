@@ -17,4 +17,4 @@ jobs:
 
       - name: Run linter
         shell: bash
-        run: uv run -- pre-commit run -a
+        run: uv venv && source .venv/bin/activate && uv pip install pre-commit && pre-commit run -a

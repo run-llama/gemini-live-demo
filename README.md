@@ -2,6 +2,8 @@
 
 This is a demo repository showcasing Gemini Live x LlamaIndex integration.
 
+Watch the [demo](https://www.loom.com/share/3f9b5c53d6c84fa89e7498a3ce7f1b99?sid=b87329ec-9278-439c-a626-dd1e13adbc97) for a quick overview!
+
 ## Install and Launch
 
 > [!IMPORTANT]
