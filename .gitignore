@@ -1,0 +1,9 @@
+# python generated files
+.venv
+__pycache__/
+.*_cache/
+lib/
+build/
+
+# env variables
+.env

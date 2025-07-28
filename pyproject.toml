@@ -1,0 +1,23 @@
+[project]
+name = "gemini-demo"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+requires-python = ">=3.13"
+dependencies = [
+  "llama-index-voice-agents-gemini-live",
+  "mypy>=1.17.0",
+  "pre-commit>=4.2.0",
+  "pytest>=8.4.1",
+  "python-dotenv>=1.1.1",
+  "ruff>=0.12.5"
+]
+
+[tool.mypy]
+disable_error_code = ["import-not-found", "import-untyped"]
+
+[tool.pytest.ini_options]
+pythonpath = ["src"]
+
+[tool.uv.sources]
+llama-index-voice-agents-gemini-live = {git = "https://github.com/run-llama/llama_index", subdirectory = "llama-index-integrations/voice_agents/llama-index-voice-agents-gemini-live", branch = "main"}
