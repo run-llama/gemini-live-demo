@@ -9,6 +9,7 @@ import json
 def filter_events(
     events: List[BaseVoiceAgentEvent],
 ) -> List[BaseVoiceAgentEvent]:
+    """Filter events to exclude audio-based ones."""
     evs = []
     for event in events:
         if "audio" not in event.type_t:
@@ -17,6 +18,7 @@ def filter_events(
 
 
 def filter_messages(messages: List[ChatMessage]) -> List[ChatMessage]:
+    """Filter messages to exclude audio-based ones."""
     msgs = []
     for message in messages:
         msg = ChatMessage(role=message.role, blocks=[])
