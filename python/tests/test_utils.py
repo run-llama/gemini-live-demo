@@ -13,7 +13,10 @@ def messages() -> List[ChatMessage]:
         ChatMessage(role="user", blocks=[AudioBlock(audio=b"Hello")]),
         ChatMessage(
             role="assistant",
-            blocks=[AudioBlock(audio=b"Hello back"), TextBlock(text="hello back")],
+            blocks=[
+                AudioBlock(audio=b"Hello back"),
+                TextBlock(text="hello back"),
+            ],
         ),
         ChatMessage(role="user", content="now what?"),
     ]

@@ -1,0 +1,56 @@
+{
+  "name": "@cle-does-things/live-chat",
+  "version": "0.1.0",
+  "description": "Demo for Gemini Live and LlamaIndexTS",
+  "keywords": [
+    "ai",
+    "voice",
+    "gemini",
+    "live",
+    "demo",
+    "llm"
+  ],
+  "homepage": "https://github.com/run-llama/gemini-live-demo#readme",
+  "bugs": {
+    "url": "https://github.com/run-llama/gemini-live-demo/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/run-llama/gemini-live-demo.git"
+  },
+  "license": "MIT",
+  "author": "Clelia Astra Bertelli",
+  "type": "commonjs",
+  "main": "dist/index.js",
+  "bin": {
+    "live-chat": "dist/index.js"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "npx tsx src/index.ts",
+    "lint": "eslint src/",
+    "build": "tsc",
+    "build:watch": "tsc --watch",
+    "dev": "npx tsx --watch src/index.ts",
+    "prod": "npm run build && node dist/index.js"
+  },
+  "dependencies": {
+    "@llamaindex/google": "^0.3.17",
+    "consola": "^3.4.2",
+    "asciiart-logo": "^0.2.7",
+    "picocolors": "1.0.1",
+    "speaker": "^0.5.5",
+    "tsx": "^4.20.3"
+  },
+  "devDependencies": {
+    "@eslint/js": "^9.32.0",
+    "@types/node": "^20.0.0",
+    "@typescript-eslint/eslint-plugin": "^8.38.0",
+    "@typescript-eslint/parser": "^8.38.0",
+    "eslint": "^9.32.0",
+    "globals": "^16.3.0",
+    "jiti": "^2.5.1",
+    "typescript": "^5.0.0",
+    "typescript-eslint": "^8.38.0"
+  }
+}

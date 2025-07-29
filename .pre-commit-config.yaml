@@ -21,7 +21,7 @@ repos:
       - id: ruff
         args: [--exit-non-zero-on-fix, --fix]
       - id: ruff-format
-        exclude: ".*poetry.lock|.*_static|.*uv.lock|.*ipynb|.*docs.*"
+        exclude: ".*poetry.lock|.*_static|.*uv.lock|.*ipynb|.*docs.*|.*.ts"
 
   - repo: https://github.com/pre-commit/mirrors-mypy
     rev: v1.0.1
@@ -44,7 +44,7 @@ repos:
             --ignore-missing-imports,
             --python-version=3.9,
           ]
-        entry: bash -c "export MYPYPATH=src/gemini_live_demo"
+        entry: bash -c "export MYPYPATH=python/src/gemini_live_demo"
 
   - repo: https://github.com/psf/black-pre-commit-mirror
     rev: 23.10.1
@@ -52,7 +52,7 @@ repos:
       - id: black-jupyter
         name: black-docs-py
         alias: black
-        files: ^(README.md|CONTRIBUTING.md)
+        files: ^(README.md|CONTRIBUTING.md|.*.ts)
         # Using PEP 8's line length in docs prevents excess left/right scrolling
         args: [--line-length=79]
 
