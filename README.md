@@ -2,7 +2,7 @@
 
 This is a demo repository showcasing Gemini Live x LlamaIndex integration.
 
-Watch the [python](https://www.loom.com/share/3f9b5c53d6c84fa89e7498a3ce7f1b99?sid=b87329ec-9278-439c-a626-dd1e13adbc97) and the [typescript]() demo videos for a quick overview!
+Watch the [python](https://www.loom.com/share/3f9b5c53d6c84fa89e7498a3ce7f1b99?sid=b87329ec-9278-439c-a626-dd1e13adbc97) and the [typescript](https://www.loom.com/share/97119c8b424e4246af591637d1f1ce3d?sid=5ec40ea7-e7e4-4bfd-a748-4263ed98100b) demo videos for a quick overview!
 
 ## Python
 
@@ -79,6 +79,18 @@ Run the package:
 
 ```bash
 npm run start
+```
+
+Try running the executable with:
+
+```bash
+npx live-chat
+```
+
+If you run into problems like `Permission Denied`, make sure you make `live-chat` an executable - for example, on Linux/macOs:
+
+```bash
+chmod +x $HOME/.npm/_npx/*/node_modules/.bin/live-chat
 ```
 
 ## Contributing

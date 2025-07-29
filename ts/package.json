@@ -1,6 +1,6 @@
 {
   "name": "@cle-does-things/live-chat",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "description": "Demo for Gemini Live and LlamaIndexTS",
   "keywords": [
     "ai",
@@ -37,13 +37,14 @@
   "dependencies": {
     "@llamaindex/google": "^0.3.17",
     "consola": "^3.4.2",
-    "asciiart-logo": "^0.2.7",
+    "figlet": "^1.8.2",
     "picocolors": "1.0.1",
     "speaker": "^0.5.5",
     "tsx": "^4.20.3"
   },
   "devDependencies": {
     "@eslint/js": "^9.32.0",
+    "@types/figlet": "^1.7.0",
     "@types/node": "^20.0.0",
     "@typescript-eslint/eslint-plugin": "^8.38.0",
     "@typescript-eslint/parser": "^8.38.0",
