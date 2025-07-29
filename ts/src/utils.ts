@@ -1,13 +1,24 @@
+// src/utils.ts
 import { Readable } from "stream";
 import Speaker from "speaker";
 import * as readline from "readline/promises";
-import { renderFilled } from "oh-my-logo";
+
+// eslint-disable-next-line  @typescript-eslint/no-require-imports
+const logo = require("asciiart-logo");
 
 export async function renderLogo(): Promise<void> {
-  const logo = await renderFilled("LIVE CHAT", {
-    palette: ["#F8E9D8", "#FFA6EA", "#45DFF8", "#BB8DEB"],
-  });
-  console.log(logo);
+  // This is the crucial dynamic import
+  const liveLogo = logo({
+    name: "Live Chat",
+    font: "ANSI Shadow",
+    lineChars: 10,
+    padding: 2,
+    margin: 3,
+    borderColor: "grey",
+    logoColor: "bold-cyan",
+    textColor: "green",
+  }).render();
+  console.log(liveLogo);
 }
 
 /**

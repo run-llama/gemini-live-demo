@@ -1,3 +1,5 @@
+#!/usr/bin/env node
+
 import { gemini, GEMINI_MODEL } from "@llamaindex/google";
 import { outputAudio, decodePCMData, consoleInput, renderLogo } from "./utils";
 import { logger } from "./logger";

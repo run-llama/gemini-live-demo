@@ -22,6 +22,9 @@
   "author": "Clelia Astra Bertelli",
   "type": "commonjs",
   "main": "dist/index.js",
+  "bin": {
+    "live-chat": "dist/index.js"
+  },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "npx tsx src/index.ts",
@@ -34,7 +37,7 @@
   "dependencies": {
     "@llamaindex/google": "^0.3.17",
     "consola": "^3.4.2",
-    "oh-my-logo": "^0.2.1",
+    "asciiart-logo": "^0.2.7",
     "picocolors": "1.0.1",
     "speaker": "^0.5.5",
     "tsx": "^4.20.3"
