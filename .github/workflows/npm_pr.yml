@@ -18,10 +18,13 @@ jobs:
           node-version: "lts/*"
 
       - name: Install dependencies
+        working-directory: ts/
         run: npm install
 
       - name: Lint
+        working-directory: ts/
         run: npm run lint
 
       - name: Build
+        working-directory: ts/
         run: npm run build
