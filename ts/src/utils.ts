@@ -2,23 +2,26 @@
 import { Readable } from "stream";
 import Speaker from "speaker";
 import * as readline from "readline/promises";
-
-// eslint-disable-next-line  @typescript-eslint/no-require-imports
-const logo = require("asciiart-logo");
+import figlet from "figlet";
+import pc from "picocolors";
 
 export async function renderLogo(): Promise<void> {
-  // This is the crucial dynamic import
-  const liveLogo = logo({
-    name: "Live Chat",
+  const logoText = figlet.textSync("Live Chat", {
     font: "ANSI Shadow",
-    lineChars: 10,
-    padding: 2,
-    margin: 3,
-    borderColor: "grey",
-    logoColor: "bold-cyan",
-    textColor: "green",
-  }).render();
-  console.log(liveLogo);
+    horizontalLayout: "default",
+    verticalLayout: "default",
+    width: 80,
+    whitespaceBreak: true,
+  });
+
+  // Add some styling with picocolors
+  const styledLogo = pc.bold(pc.cyan(logoText));
+
+  // Add some padding/margin
+  console.log("\n");
+  console.log(styledLogo);
+  console.log(pc.gray("─".repeat(60)));
+  console.log("\n");
 }
 
 /**
